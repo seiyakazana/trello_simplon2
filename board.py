@@ -3,7 +3,7 @@ data = load_data()
 
 def list_boards():
     data = load_data()
-    if not data["boards"]:
+    if not data["board"]:
         print("Aucun board trouvé.")
         return
     for key in data.items():
@@ -15,22 +15,18 @@ def create_board(data, board_name):
         print(f"Le board '{board_name}' existe déjà.")
         return
     new_board = {
-        "name": board_name,
-        "lists": []
+        board_name : []
     }
-    data["boards"].append(new_board)
+    data["board"].append(new_board)
     save_data(data)
     print(f"Board '{board_name}' créé avec succès.")
     return data
 
-
-
-
 def delete_board(board_name):
     data = load_data()
-    for board in data["boards"]:
+    for board in data["board"]:
         if board["name"] == board_name:
-            data["boards"].remove(board)
+            data["board"].remove(board)
             save_data(data)
             print(f"Board '{board_name}' supprimé.")
             return
