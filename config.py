@@ -1,6 +1,5 @@
 import json
 
-
 DATA_FILE = 'src/data.json'
 
 def load_data():
