@@ -1,32 +1,62 @@
 {
-    "boards": [
-      {
-        "name": "Projet X",
-        "lists": [
-          {
-            "name": "À faire",
-            "cards": [
-              { "title": "Tâche 1", "description": "Faire ceci" },
-              { "title": "Tâche 2", "description": "Faire cela" }
-            ]
-          }
-        ]
-      }
-    ],
-    
-    "boards2": [
-      {
-        "name": "Projet X",
-        "lists": [
-          {
-            "name": "À faire",
-            "cards": [
-              { "title": "Tâche 1", "description": "Faire ceci" },
-              { "title": "Tâche 2", "description": "Faire cela" }
-            ]
-          }
-        ]
-      }
-    ]
-  }
-  
+  "boards": [
+    {
+      "name": "Projet A",
+      "lists": [
+        {
+          "name": "À faire",
+          "cards": [
+            {
+              "title": "Tâche 1",
+              "description": "Faire ceci"
+            },
+            {
+              "title": "Tâche 2",
+              "description": "Faire cela"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Projet B",
+      "lists": [
+        {
+          "name": "À faire",
+          "cards": [
+            {
+              "title": "Tâche 1",
+              "description": "Faire ceci"
+            },
+            {
+              "title": "Tâche 2",
+              "description": "Faire cela"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Projet C",
+      "lists": [
+        {
+          "name": "À faire",
+          "cards": [
+            {
+              "title": "Tâche 1",
+              "description": "Faire ceci"
+            },
+            {
+              "title": "Tâche 2",
+              "description": "Faire cela"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "board test",
+      "lists": []
+    }
+  ]
+}
