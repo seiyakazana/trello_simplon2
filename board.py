@@ -33,5 +33,5 @@ def delete_board(board_name):
 
 
 create_board(data, 'boards2')
-delete_board('board test2')
+delete_board('boards2')
 list_boards()
