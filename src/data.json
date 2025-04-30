@@ -1,5 +1,5 @@
 {
-  "board": [
+  "boards": [
     {
       "name": "Projet A",
       "lists": [
@@ -53,32 +53,6 @@
           ]
         }
       ]
-    },
-    {
-      "board test": []
-    }
-  ],
-  "board2": [
-    {
-      "name": "Projet D",
-      "lists": [
-        {
-          "name": "À faire",
-          "cards": [
-            {
-              "title": "Tâche 1",
-              "description": "Faire ceci"
-            },
-            {
-              "title": "Tâche 2",
-              "description": "Faire cela"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "board test": []
     }
   ]
 }
