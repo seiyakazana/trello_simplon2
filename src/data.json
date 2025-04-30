@@ -1,0 +1,32 @@
+{
+    "boards": [
+      {
+        "name": "Projet X",
+        "lists": [
+          {
+            "name": "À faire",
+            "cards": [
+              { "title": "Tâche 1", "description": "Faire ceci" },
+              { "title": "Tâche 2", "description": "Faire cela" }
+            ]
+          }
+        ]
+      }
+    ],
+    
+    "boards2": [
+      {
+        "name": "Projet X",
+        "lists": [
+          {
+            "name": "À faire",
+            "cards": [
+              { "title": "Tâche 1", "description": "Faire ceci" },
+              { "title": "Tâche 2", "description": "Faire cela" }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  
