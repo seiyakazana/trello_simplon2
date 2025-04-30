@@ -1,4 +1,5 @@
 from config import load_data, save_data
+data = load_data()
 
 def list_boards():
     data = load_data()
@@ -8,14 +9,22 @@ def list_boards():
     for key in data.items():
         print(key)
 
-def create_board(board_name):
+def create_board(data, board_name):
     data = load_data()
     if any(board["name"] == board_name for board in data["boards"]):
         print(f"Le board '{board_name}' existe déjà.")
         return
-    data["boards"].append({"name": board_name, "lists": []})
+    new_board = {
+        "name": board_name,
+        "lists": []
+    }
+    data["boards"].append(new_board)
     save_data(data)
     print(f"Board '{board_name}' créé avec succès.")
+    return data
+
+
+
 
 def delete_board(board_name):
     data = load_data()
@@ -28,7 +37,6 @@ def delete_board(board_name):
     print(f"Aucun board nommé '{board_name}' trouvé.")
 
 
-create_board('board test')
-
-delete_board('board test')
-list_boards()
+create_board(data, 'board test')
+#delete_board('board test')
+#list_boards()
