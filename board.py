@@ -7,7 +7,7 @@ def list_boards():
     if not data["boards"]:
         print("Aucun board trouvé.")
         return
-    for key in data.items():
+    for key in data:
         print(key)
 
 def create_board(data, board_name):
@@ -32,6 +32,6 @@ def delete_board(board_name):
     print(f"Aucun board nommé '{board_name}' trouvé.")
 
 
-create_board(data, 'boards2')
-delete_board('boards2')
+#create_board(data, 'boards2')
+#delete_board('boards2')
 list_boards()
