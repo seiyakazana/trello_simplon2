@@ -1,21 +1,7 @@
-from config import *
-
-lists_boards1 = data["boards"][0]["lists"]
-lists_boards2 = data["boards2"][0]["lists"]
-
-boards1_name = data["boards"][0]["name"]
-#print(boards1_name)
-#print(lists_boards1)
-
-boards2_name = data["boards2"][0]["name"]
-#print(boards2_name)
-#print(lists_boards2)
-
-#print(data["boards2"][0]["lists"][0])
-
-board_name = data['boards']
+from config import load_data, save_data
 
 def list_boards():
+    data = load_data()
     if not data["boards"]:
         print("Aucun board trouvé.")
         return
@@ -23,23 +9,26 @@ def list_boards():
         print(key)
 
 def create_board(board_name):
+    data = load_data()
     if any(board["name"] == board_name for board in data["boards"]):
-        print("board déjà existant")
+        print(f"Le board '{board_name}' existe déjà.")
         return
     data["boards"].append({"name": board_name, "lists": []})
-    write_data(data)
-    print(f"Board '{board_name}' créé")
-
+    save_data(data)
+    print(f"Board '{board_name}' créé avec succès.")
 
 def delete_board(board_name):
-    count = len(data["boards"])
-    if len(data["boards"]) < count:
-        write_data(data)
-        print(f"Board '{board_name}' supprimé.")
-    else:
-        print(f"Aucun board nommé '{board_name}' trouvé.")
+    data = load_data()
+    for board in data["boards"]:
+        if board["name"] == board_name:
+            data["boards"].remove(board)
+            save_data(data)
+            print(f"Board '{board_name}' supprimé.")
+            return
+    print(f"Aucun board nommé '{board_name}' trouvé.")
 
 
+create_board('board test')
+
+delete_board('board test')
 list_boards()
-#create_board(board_name)
-delete_board(board_name)
